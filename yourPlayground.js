@@ -39,3 +39,11 @@ console.log(tipAmount_3)
 
 // alert (tipAmount_3) is not working, Use console.log instead .
 
+// This is how we use Typecasting in JavaScript
+
+food_4 =Number( prompt('What is the cost of the item? '))
+tipPercentage_4 =Number( prompt('What is the Tip Percentage ? ')/100);
+tipAmount_4 = food_4*tipPercentage_4
+Total= food_4 + tipAmount_4;
+
+console.log(Total)
