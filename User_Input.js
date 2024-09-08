@@ -1,8 +1,9 @@
-const prompt= require('prompt-sync')()
+const prompt = require("prompt-sync")();
 
-food=Number(prompt('What is the cost of the Food? '));
-tipPercentage=Number( prompt('What will be the Tip Percentage? ')/100) ;
-tipamount=food*tipPercentage;
-Total= food + tipamount;
+const food = Number(prompt("What is the cost of the Food? "));
+const tipPercentage = Number(prompt("What will be the Tip Percentage? ") / 100);
+const tipamount = food * tipPercentage;
+const Total = food + tipamount;
 
-console.log(Total);
+console.log("Tip Amount:", tipamount);
+console.log("Total Amount:", Total);
