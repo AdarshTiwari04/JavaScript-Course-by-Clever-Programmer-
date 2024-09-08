@@ -131,4 +131,83 @@ const sumArrow = (a,b) => a+b;
 
 /*
 
+const myArray = ['Apple', 'Banana', 'Orange'];
+
+console.log(myArray[0]); // Apple
 */
+
+// How to push a Element in the array
+
+/*
+myArray.push('Mango');
+console.log(myArray); // ['Apple', 'Banana', 'Orange', 'Mango']
+*/
+
+// How to use slice in the array
+
+/*
+It starts from 0 up to less than 2 meaning [0,1]
+console.log(myArray.slice(0, 2)); // ['Apple', 'Banana']
+
+It starts from 2 up to end meaning [2,3]
+console.log(myArray.slice(2)); // ['Orange', 'Mango']
+*/
+
+// Array Method
+
+/*
+Examples:
+myArray.pop() // Removes the last element
+myArray.shift() // Removes the first element
+myArray.unshift('Kiwi') // Adds the element at the beginning
+myArray.length() // Returns the length of the array
+my array.indexOf() //  Returns the index of any element
+*/
+
+// Object
+
+/*
+
+Key: Values (pair)
+
+Example:
+const person = {
+  name: "John Doe",
+  age: 30,
+  city: "New York",
+};
+
+Access Object Properties with dot notation
+console.log(person.name); // John Doe
+
+Access Object Properties with bracket notation
+console.log(person["age"]); // 30
+
+Assign Object Properties with dot notation
+person.phone = "7004065287";
+
+Assign Object Properties with bracket notation
+
+person["phone"] = '7004065287';
+
+console.log(person);
+
+*/
+
+// Loops
+
+/*
+
+for loop:(With index)
+const fruits = ["Apple", "Banana", "Orange",]
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
+
+for loop:(Without index)
+Here, fruit is the key or the variable and fruits is the array to print.
+you can change the name of fruit (key) to any like vari
+for (const fruit of friuts) {
+  console.log(fruit);
+}
+  */
