@@ -24,13 +24,26 @@ const numbers = ["1", "2", "3", "4", "5"];
 
 // console.log(result); // Outputs: [2, 4, 6, 8, 10]
 
+// const double = (numbers) => {
+//   let result = [];
+
+//   for (const number of numbers) {
+//     result.push(number * 2);
+//   }
+//   return result;
+// };
+
+// console.log(double(numbers)); // Outputs: [2, 4, 6, 8, 10]
+
+// How to get a new Array with Square root of the values
+
 const double = (numbers) => {
   let result = [];
 
   for (const number of numbers) {
-    result.push(number * 2);
+    result.push(number ** 2);
   }
   return result;
 };
 
-console.log(double(numbers)); // Outputs: [2, 4, 6, 8, 10]
+console.log(double(numbers)); // Outputs: [1, 4, 9, 16, 25]

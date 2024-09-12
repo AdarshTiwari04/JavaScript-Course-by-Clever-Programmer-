@@ -211,3 +211,57 @@ for (const fruit of friuts) {
   console.log(fruit);
 }
   */
+
+// How to loop in a string phrase
+
+/*
+const phrase = "Hello World";
+for (let i = 0; i < phrase.length; i++) {
+  console.log(phrase[i]);
+}
+*/
+
+// for... of VS for....in
+
+/*
+for... in :Normally it loops through properties names/ keys or the index of the array but can be used otherwise also. It is commonly used for objects.
+
+Examples:
+  const person = {
+  name: "John Doe",
+  age: 30,
+  city: "New York",
+};
+
+for (const key in person) {
+  console.log(key);// it shows the property name.
+}
+
+for (const key in person) {
+  console.log(person[key]);// it show the value of the property.
+}
+
+
+for... of : it loops through values of the Array or a string . It is used for array or iterable / strings .
+
+Examples:
+
+const numbers = [1, 2, 3, 4, 5];
+
+for (const number of numbers) {
+  console.log(number); // It shows the value of the array.
+}
+
+*/
+
+// Short trick for taking an input in an array
+
+// let numbers = Array.from({ length: 5 }); // Create an array of length 5
+
+// Different way of taking input from the user
+
+//let numbers = [];
+
+// for (let i = 0; i < 5; i++) {
+//   numbers.push(Number(prompt(`Enter number ${i + 1}: `)));
+// }
