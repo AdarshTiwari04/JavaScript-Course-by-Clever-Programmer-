@@ -1,1 +1,0 @@
-web_view.innerHTML = "<h1> leonardo </h1>";
