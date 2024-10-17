@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Rock Paper Scissors Game</h1>
+    <p>
+      Welcome to the classic game of Rock, Paper, Scissors. Please choose your
+      move and click the corresponding button.
+    </p>
+
+    <div style="display: flex">
+      <button
+        type="button"
+        style="height: 100px; width: 100px; background-color: red"
+        id="Red"
+        class="colorSquare"
+        value="Red"
+      >
+        Red
+      </button>
+
+      <button
+        type="button"
+        style="height: 100px; width: 100px; background-color: yellow"
+        id="Yellow"
+        class="colorSquare"
+        value="Yellow"
+      >
+        Yellow
+      </button>
+
+      <button
+        type="button"
+        style="height: 100px; width: 100px; background-color: green"
+        id="Green"
+        class="colorSquare"
+        value="Green"
+      >
+        Green
+      </button>
+    </div>
+    <button
+      type="button"
+      id="resetButton"
+      style="height: 50px; width: 100px; background-color: blue; margin: 25%"
+      value="Reset"
+    >
+      Reset
+    </button>
+    <script src="Rock_Paper_game.js"></script>
+  </body>
+</html>

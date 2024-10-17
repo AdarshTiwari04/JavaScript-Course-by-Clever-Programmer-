@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Hero App</title>
+  </head>
+  <body
+    style="
+      background-image: url('/exercises/allec-gomes-1ULMgDjvTT8-unsplash.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    "
+  >
+    <div
+      style="
+        margin-left: 36%;
+        margin-top: 8%;
+        background-color: rgb(27, 206, 149);
+        border: 2px solid black;
+        border-radius: 12px;
+        margin-right: 36%;
+      "
+      id="container"
+    >
+      <h1 style="margin-left: 15%">🌟Super Hero App</h1>
+      <h4 style="margin-left: 9%">
+        You can search for a super hero like <strong>"Batman"</strong> or
+        <strong>"Thanos"</strong>or..... You can Generate a random Hero
+      </h4>
+      <input
+        style="margin-left: 10%; border: 1px solid black"
+        id="Hero_name"
+        type="text"
+        placeholder="Enter a Hero name"
+      />
+      <button id="Search_button">Search</button>
+      <button id="Hero_button">Random Hero</button>
+      <div style="margin-left: 2.5%; margin-top: 2%" id="Hero_div">
+        <img src="" alt="" />
+      </div>
+      <br />
+      <div id="Stats"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

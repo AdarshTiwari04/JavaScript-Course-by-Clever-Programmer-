@@ -225,7 +225,7 @@ for (let i = 0; i < phrase.length; i++) {
 }
 */
 
-//! for... of VS for....in
+//! for... of VS for....in VS .forEach method
 
 /*
 ! for... in :Normally it loops through properties names/ keys or the index of the array but can be used otherwise also. It is commonly used for objects.
@@ -255,6 +255,24 @@ const numbers = [1, 2, 3, 4, 5];
 for (const number of numbers) {
   console.log(number); //! It shows the value of the array.
 }
+
+! forEach method : It is not a loop but a method used when you want to perform an action on each element of the array. It doesn't return a new array, but it modifies the original array and it has 3 build-In arguments that can be passed and used to modify the original array. 
+
+Examples 1:
+
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach((number) => {
+  console.log(number); //! It shows the value of the array.
+});
+
+Examples 2:
+
+const numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach((number, index) => {
+  console.log(`Number: ${number}, Index: ${index}`); // It shows the value and index of the array.
+});
 
 */
 
@@ -400,4 +418,212 @@ let newDiv = document.getElementById("Title");
 newDiv.style.color = "red";
 newDiv.style.fontSize = "24px";
 
+@@@@ To add a onClick event handlers to the buttons 
+
+!Syntax:
+
+let button = document.getElementById("myButton");
+
+//! Always use a function or arrow function to tell the functionality of the button because it will not work if you don't make it a function.
+
+button.onclick = () =>console.log("Button clicked!");
+
+@@@@ To add a Event handler to a button.
+
+!Syntax:
+
+let button = document.getElementById("myButton");
+
+button.addEventListener("click", () => console.log("Button clicked!"));
+
+@@@@ To add a Event handler to multiple buttons.
+
+!Syntax:
+
+let buttons = document.getElementsByClassName("myButton");
+
+for(let i=0; i<buttons.length; i++){
+  buttons[i].addEventListener("click", () => console.log("Button " + (i+1) + " clicked!"));
+}
+
+@@@@ To select all the button or div with its class attribute 
+
+!Syntax:
+
+let buttons = document.querySelectorAll(".myButton");// Here we select all the buttons whose class name is "myButton" but to select all of them , we have to use a .class_name(dot) to tell the computer/system that we are entering a class name instead of a id.
+
+buttons.forEach((button) => {
+  button.onclick = () => {
+    console.log(`${button.value} clicked`);
+  };
+
 */
+
+//$ How to innerText value of a Input element
+
+/*
+
+!Syntax:
+
+let input = document.getElementById("myInput");
+
+console.log(input.value); //! You have to use the .value attribute on the input element to take it's value into account.
+
+*/
+
+//? How to fix the decimal value of a Input element and Display it on the DOM
+
+/*
+
+!Syntax:
+
+let input = document.getElementById("myInput");
+
+console.log(Number(input.value).toFixed(2)); //! You have to use the .toFixed(2) attribute on the input element to display the decimal value upto 2 decimal places.
+
+*/
+
+//? How to give comma in the Displayed value on the DOM ( Speacial case for United States )
+
+/*
+
+!Syntax:
+
+let input = document.getElementById("myInput");
+
+let value = Number(input.value).toLocaleString('en-US'); //! You have to use the .localestring to convert the display value according to the United States Number System or differnt Countries.
+
+*/
+
+//? How to throw an error if the condition is false
+
+/*
+
+!Syntax:
+
+let input = document.getElementById("myInput");
+
+if(Number(input.value) < 0){
+  throw new Error("Input value must be greater than or equal to 0");
+}
+
+*/
+
+//@ Short Note:
+
+//@ You can not use the .toLocaleString and .toFixed methods on the Display element Simultaneously.
+
+//$ API:-
+
+//? API stands for Application Programming Interface and It lets your app communicate with other services to fetch data. The rules and protocols are described in the following section below :-
+/* 
+- APIs are provided by different organizations or companies.
+- APIs are used to interact with web services, databases, APIs, or other applications.
+- APIs are written in different programming languages such as JavaScript, Java, Python, Ruby, etc.
+- APIs are designed to be easy to use and understand.
+- APIs are designed to be consistent and well-documented.
+- APIs are designed to follow best practices for security, performance, and reliability.
+
+//? Types of API Categories: // Most Common Ones:
+- RESTful APIs: These APIs use HTTP methods like GET, POST, PUT, DELETE, and PATCH to perform CRUD (Create, Read, Update, Delete) operations.
+- Websockets APIs: These APIs use WebSockets to enable real-time communication between clients and servers.
+- Real-time APIs: These APIs use technologies like WebSockets or Server-Sent Events (SSE) to provide real-time updates to clients.
+- Streaming APIs: These APIs use technologies like WebSockets or Server-Sent Events (SSE) to stream data in real-time.
+- Data APIs: These APIs provide access to data stored in databases or other storage systems.
+- Machine Learning APIs: These APIs provide access to machine learning models for predicting or analyzing data.
+- Geolocation APIs: These APIs provide access to geolocation services for retrieving user location information.
+- Payment Processing APIs: These APIs provide access to payment processing services for processing payments.
+- API Gateways: These APIs act as gateways between clients and APIs, managing authentication, authorization, and routing requests.
+
+
+//? API Protocols:
+- REST: Representational State Transfer (REST) is a software architectural style for designing APIs that allows clients to interact with a server using standard HTTP methods like GET, POST, PUT, DELETE, and PATCH.
+
+- Websockets: Websockets are a protocol that allows two parties to communicate continuously and in real-time using a single TCP connection. Websockets are used by web services to enable real-time communication between clients and servers.
+
+- Real-time APIs: Real-time APIs use technologies like WebSockets or Server-Sent Events (SSE) to provide real-time updates to clients. Real-time APIs are designed to be efficient and scalable, allowing clients to receive notifications and updates in real-time.
+
+- Streaming APIs: Streaming APIs use technologies like WebSockets or Server-Sent Events (SSE) to stream data in real-time. Streaming APIs are designed to be efficient and scalable, allowing clients to subscribe to specific streams of data and receive updates in real-time.
+
+- Data APIs: Data APIs provide access to data stored in databases or other storage systems. Data APIs are designed to be flexible and scalable, allowing clients to interact with the data in a consistent and efficient manner.
+
+- Machine Learning APIs: Machine Learning APIs provide access to machine learning models for predicting or analyzing data. Machine Learning APIs are designed to be flexible and scalable, allowing clients to integrate machine learning functionality into their applications.
+
+- Geolocation APIs: Geolocation APIs provide access to geolocation services for retrieving user location information. Geolocation APIs are designed to be flexible and scalable, allowing clients to integrate geolocation functionality into their applications.
+
+- Payment Processing APIs: Payment Processing APIs provide access to payment processing services for processing payments. Payment Processing APIs are designed to be flexible and scalable, allowing clients to integrate payment processing functionality into their applications.
+
+- API Gateways: API Gateways act as gateways between clients and APIs, managing authentication, authorization, and routing requests. API Gateways are designed to be flexible and scalable, allowing clients to securely access and interact with APIs.
+
+*/
+
+//? What is a Promise?
+
+//! A Promise is an object that represents the eventual completion or failure of an asynchronous operation. Promises are used to handle asynchronous code and provide a way to handle the result or error of the asynchronous operation.
+
+//? Difference between Asynchronous and Synchronous Code Execution
+
+/*
+
+- Asynchronous: Asynchronous code is written to handle multiple tasks simultaneously. It allows the program to continue executing other tasks while waiting for the result of an asynchronous operation.
+
+- Synchronous: Synchronous code is written to handle multiple tasks sequentially. It waits for the result of one task before executing the next task.
+
+*/
+
+//? What is Fetch API ??
+
+//! Fetch API is a modern JavaScript interface for making HTTP requests. It provides a global fetch() function that takes a URL as an argument and returns a Promise that resolves to a Response object. The Response object provides methods to access the response body, status, and headers.
+
+//? Fetch API to get data from an API
+
+/*
+
+!Syntax:
+
+fetch("https://api.example.com/data")
+.then((response) => response.json()) // .then() method is chained to the fetch() call to handle the response asynchronously.
+.then((data) => console.log(data)) // returns a Response object
+
+! Some other methods to chain to fetch method :-
+.catch((error) => console.error("Error:", error))
+.finally(() => console.log("Fetch completed"));
+
+*/
+
+//@ Short Trick for Replacing or appending images or strings in DOM Manipulation
+
+/*
+
+!Syntax:
+
+let element = document.getElementById("myElement");
+
+element.innerHTML += "<div>New Div</div>"; // Adds New inner HTML content with the existing inner HTML content.
+
+element.innerHTML = "<div>New Div</div>"; // replaces the inner HTML content of the element with a New One.
+
+*/
+
+//$ How to Loop through an Object
+
+/*
+
+!Syntax:
+
+let myObj = {
+  name: "John",
+  age: 30,
+  city: "New York"
+}
+  
+Object.keys(myObj)//! This method in JavaScript allows you to get an array of all the keys of a given object. The JS feature is designed to loop over all the properties of an object because it is a simple way to access and manipulate each key individually.
+
+*/
+
+//? The difference between info.powerstats.stat and info.powerstats[stat]
+
+//! The difference between info.powerstats and info.powerstats[stat] is that info.powerstats,stat is used for static properties that means stat is explicitly the name of the property.
+//! For example, info.powerstats.strength would access the strength property of powerstats
+//! but In info.powerstats[stat] , firstly evaluates the value of the stat property , and then that property is accessed.
+//! For example, if stat = 'strength', then info.powerstats[stat] is equivalent to info.powerstats.strength.

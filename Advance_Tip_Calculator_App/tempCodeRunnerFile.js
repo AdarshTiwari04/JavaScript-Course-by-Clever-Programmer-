@@ -1,0 +1,1 @@
+const numberOfPeople = numberOfPeopleDiv.innerText;
