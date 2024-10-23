@@ -627,3 +627,169 @@ Object.keys(myObj)//! This method in JavaScript allows you to get an array of al
 //! For example, info.powerstats.strength would access the strength property of powerstats
 //! but In info.powerstats[stat] , firstly evaluates the value of the stat property , and then that property is accessed.
 //! For example, if stat = 'strength', then info.powerstats[stat] is equivalent to info.powerstats.strength.
+
+//@ Asynchronous Programming Interface
+
+//@ In JavaScript, there are two main types of APIs:
+
+//@ 1. Callbacks: This is a simple callback function that is passed as an argument to another function. When the other function is finished executing, it calls the callback function. Callbacks are commonly used when you want to perform an action after another action has completed.
+
+//@ 2. Promises: Promises are an alternative to callbacks. They represent the eventual completion or failure of an asynchronous operation. Promises provide a way to handle asynchronous code and provide a way to handle the result or error of the asynchronous operation. Promises are used when you want to perform an action and then continue executing other code after the action has completed.
+
+//! Callbacks Example:
+
+/*
+
+function greet(name, callback) {
+  console.log(`Hello, ${name}!`);
+  callback();
+
+  setTimeout(() => {
+    console.log("I'm waiting now.");
+  }, 2000);
+}
+
+greet("John", () => {
+  console.log("Callback function called.");
+});
+
+*/
+
+//! Promises Example:
+
+/*
+
+const greet = (name) => {
+  return new Promise((resolve, reject) => {
+    console.log(`Hello, ${name}!`);
+    setTimeout(() => {
+      resolve("Promise resolved successfully.");
+    }, 2000);
+  })
+    .then((message) => {
+      console.log(message);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
+
+*/
+
+greet("John");
+
+//! Promises and Async/Await Example:
+
+/*
+
+const greet = async (name) => {
+  try {
+    console.log(`Hello, ${name}!`);
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    console.log("I'm waiting now.");
+    return "Async/Await resolved successfully.";
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+  // .then((message) => {
+  //   console.log(message);
+  // })
+  // .catch((error) => {
+  //   console.error(error);
+  // });
+};
+
+greet("John")
+  .then((message) => {
+    console.log(message);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+  */
+
+//$ How to use or mimic asynchronous programming in javascript
+
+//$ setTimeout(() => {function}, 2000) // setTimeout is  a function in JavaScript that allows you to execute a piece of code or a function after a specified delay.
+
+//! Ternary operator
+
+//! The ternary operator is a shorthand for an if-else statement. It is used to conditionally assign a value to a variable.
+
+//! condition ? expressionIfTrue : expressionIfFalse;
+
+/*
+
+!!! Example:
+
+let x = 10;
+let result = x > 5 ? "Greater than 5" : "Less than or equal to 5";
+
+console.log(result); // Output: Greater than 5
+
+*/
+
+//? Rules for using the async / await
+
+//? 1. You must create a function to use async functions
+//? 2. You must use the word "async" to use async functions
+//? 3. You must use the word "await" for all the promises
+
+//! Old Way of writing promises or api calls with .then() method.
+
+//! // console.log(promise); // it only shows Promise {} but to get the data inside the promise you have to use .then() instead.
+//! promise.then((data) => console.log(data)).catch((err) => console.log(err));
+
+//! // Here we have to use both .then() and .catch() because otherwise the promise will only get the resovle data and not the reject data if something gets wrong.
+
+//$ New ES6 way of writing promises or api calls with async and await methods
+
+//$ const fetchData = async () => {
+//$   try {
+//$     //  const url = "https://jsonplaceholder.typicode.com/users/1";
+//$     const response = await promise; // or await fetch(url)
+//$    console.log(response);
+//$   } catch (err) {
+//$     console.log(err);
+//$   }
+//$ };
+
+//$ fetchData(); // calling the function to fetch data.
+
+//@ Note: In this code, we are using async/await to handle promises. It makes the code cleaner and easier to read. But keep in mind that async/await can only be used in async functions, not regular functions.
+
+//! How to get data from a async function
+
+//! let data = {
+//!   rating: undefined,
+//!   tip: undefined,
+//! };
+
+//! const fetchData = async () => {
+//!   try {
+//!     const response = await promise;
+//!     console.log(response);
+//!     data.rating = 5;
+//!     data.tip = 0.2;
+//!     return data; // return the data after setting it in the object.
+//!   } catch (err) {
+//!     console.log(err);
+//!     data.rating = 1;
+//!     data.tip = 0;
+//!     return data; // return the data after setting it in the object.
+//!   }
+//! };
+
+// Here, fetchData() function is a promise and you can only retrieve data from a promise using two methods : 1. .then() and 2.Async/await() function .
+// You cannot console.log fetchData() directly thinking it as a normal function and cannot use await because to use await , you have to first have a async function outside.
+
+// fetchData().then((value) => console.log(value)); // calling the function to fetch data.
+
+//! const display = async () => {
+//!   const data = await fetchData();
+//!   console.log(data);
+//! };
+
+//! display(); // calling the function to fetch data and display it.
