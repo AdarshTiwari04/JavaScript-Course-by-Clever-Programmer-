@@ -793,3 +793,74 @@ console.log(result); // Output: Greater than 5
 //! };
 
 //! display(); // calling the function to fetch data and display it.
+
+//* Class
+
+//$ A class is a blueprint for creating objects that have properties and methods. In JavaScript, classes are defined using the keyword "class".
+
+//! Syntax:
+
+/*
+class Person {
+   // The constructor method is used to initialize objects created from the class
+  constructor(name, age) {
+    this.name = name; // this keyword is used inside a Constructor/Method of an object, it refers to the new created object that is calling the constructor/method.
+    this.age = age;
+  }
+
+   // Method inside the class
+  greet() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+
+   // Another method
+  haveBirthday() {
+    this.age += 1;
+    console.log(`Happy birthday! You are now ${this.age} years old.`);
+  }
+}
+
+ // Creating an instance of the class
+const person1 = new Person('John', 30);
+
+ // Using the methods
+ person1.greet(); // Output: Hello, my name is John and I am 30 years old.
+ person1.haveBirthday(); // Output: Happy birthday! You are now 31 years old.
+
+*/
+
+//! What is a method inside the class
+
+//! A method inside a class is just only a function that belongs to an object created from that class. Methods can access and modify the properties of the object they belong to.
+
+//? Inheritance
+
+//$ Inheritance is a way of creating a new class that takes properties and methods from an existing class. In JavaScript, inheritance is achieved using the "extends" keyword.
+
+/*
+class Employee extends Person {
+  constructor(name, age, jobTitle) {
+    super(name, age);  // Calls the parent class's constructor
+    this.jobTitle = jobTitle;
+  }
+
+  work() {
+    console.log(`${this.name} is working as a ${this.jobTitle}.`);
+  }
+}
+
+const employee1 = new Employee('Jane', 28, 'Software Developer');
+employee1.greet();  // Inherited from Person
+employee1.work();   // Specific to Employee
+*/
+
+//! What is a Object ?
+
+//! An object is an instance of a class that consists of properties and methods. In JavaScript, objects are created using the "new" keyword.
+
+//! Syntax
+
+/*
+const person = new Person('John', 30);//! Here person is a new Object created to access the properties and methods of the class Person.
+console.log(person); // Output: Person { name: 'John', age: 30 }
+*/
